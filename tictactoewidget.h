@@ -2,6 +2,7 @@
 #define TICTACTOEWIDGET_H
 
 #include <QWidget>
+class QPushButton;
 
 class TicTacToeWidget : public QWidget
 {
@@ -10,6 +11,10 @@ class TicTacToeWidget : public QWidget
 public:
     TicTacToeWidget(QWidget *parent = 0);
     ~TicTacToeWidget();
+
+private:
+    QList<QPushButton*> board;
+    void setupBoard();
 };
 
 #endif // TICTACTOEWIDGET_H
